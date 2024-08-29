@@ -1,0 +1,25 @@
+server:
+  port: 8027
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://139.186.161.160:1433;DatabaseName=kmykarchives;TrustServerCertificate=true
+    username: kmykarchives
+    password: kmykarchives123!
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+jwt:
+  expire: 1200
+  secret: ugWR0ckOBOSqHG845wtt4SEas3kOZC5DMM6vnoDE4NjgO
+
+thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
+
+
